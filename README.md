@@ -53,7 +53,7 @@ git clone https://github.com/unicorndev-727/nextjs-ecommerce-fashion.git
 Go to the project directory
 
 ```bash
-cd e-commerce
+cd nextjs-ecommerce-fashion
 ```
 
 Remove remote origin
