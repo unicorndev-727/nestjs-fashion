@@ -176,7 +176,7 @@ const SortMenu: React.FC<{ orderby: OrderType }> = ({ orderby }) => {
       </Menu.Button>
       <Menu.Items className="flex flex-col z-10 items-start text-xs sm:text-sm w-auto sm:right-0 absolute p-1 border border-gray200 bg-white mt-2 outline-none">
         <Menu.Item>
-          {({ active }) => (
+          {({ active }: {active: boolean}) => (
             <button
               type="button"
               onClick={() =>
@@ -193,7 +193,7 @@ const SortMenu: React.FC<{ orderby: OrderType }> = ({ orderby }) => {
           )}
         </Menu.Item>
         <Menu.Item>
-          {({ active }) => (
+          {({ active }: {active: boolean}) => (
             <button
               type="button"
               onClick={() =>
@@ -210,7 +210,7 @@ const SortMenu: React.FC<{ orderby: OrderType }> = ({ orderby }) => {
           )}
         </Menu.Item>
         <Menu.Item>
-          {({ active }) => (
+          {({ active }: {active: boolean}) => (
             <button
               type="button"
               onClick={() =>

@@ -238,7 +238,7 @@ const Product: React.FC<Props> = ({ product, products }) => {
               </div>
             </div>
             <Disclosure>
-              {({ open }) => (
+              {({ open } : {open: boolean}) => (
                 <>
                   <Disclosure.Button className="py-2 focus:outline-none text-left mb-4 border-b-2 border-gray200 flex items-center justify-between">
                     <span>{t("details")}</span>

@@ -66,14 +66,14 @@ const TopNav = () => {
                 style={{ zIndex: 9999 }}
               >
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <MyLink active={active} href={asPath} locale="en">
                       {t("eng")}
                     </MyLink>
                   )}
                 </Menu.Item>
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <MyLink active={active} href={asPath} locale="my">
                       {t("myn")}
                     </MyLink>
@@ -92,7 +92,7 @@ const TopNav = () => {
                 style={{ zIndex: 9999 }}
               >
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <a
                       href="#"
                       className={`${active
@@ -105,7 +105,7 @@ const TopNav = () => {
                   )}
                 </Menu.Item>
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <a
                       href="#"
                       className={`${active
