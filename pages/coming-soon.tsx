@@ -25,8 +25,8 @@ const ComingSoon = () => {
         />
         <span className="text-gray400">
           {t("go_back_to")}{" "}
-          <Link href="/">
-            <a className="underline font-bold hover:text-gray500">home page</a>
+          <Link href="/" className="underline font-bold hover:text-gray500">
+            home page
           </Link>
           ?
         </span>

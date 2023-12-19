@@ -22,15 +22,9 @@ const MyLink: React.FC<LinkProps> = ({
   ...rest
 }) => {
   return (
-    <Link href={href} locale={locale}>
-      <a
-        className={`py-2 px-4 text-center ${
-          active ? "bg-gray200 text-gray500" : "bg-white text-gray500"
-        }`}
-        {...rest}
-      >
-        {children}
-      </a>
+    <Link href={href} locale={locale} className={`py-2 px-4 text-center ${active ? "bg-gray200 text-gray500" : "bg-white text-gray500"
+      }`} {...rest}>
+      {children}
     </Link>
   );
 };
@@ -101,11 +95,10 @@ const TopNav = () => {
                   {({ active }) => (
                     <a
                       href="#"
-                      className={`${
-                        active
-                          ? "bg-gray100 text-gray500"
-                          : "bg-white text-gray500"
-                      } py-2 px-4 text-center focus:outline-none`}
+                      className={`${active
+                        ? "bg-gray100 text-gray500"
+                        : "bg-white text-gray500"
+                        } py-2 px-4 text-center focus:outline-none`}
                     >
                       {t("usd")}
                     </a>
@@ -115,11 +108,10 @@ const TopNav = () => {
                   {({ active }) => (
                     <a
                       href="#"
-                      className={`${
-                        active
-                          ? "bg-gray100 text-gray500"
-                          : "bg-white text-gray500"
-                      } py-2 px-4 text-center focus:outline-none`}
+                      className={`${active
+                        ? "bg-gray100 text-gray500"
+                        : "bg-white text-gray500"
+                        } py-2 px-4 text-center focus:outline-none`}
                     >
                       {t("mmk")}
                     </a>

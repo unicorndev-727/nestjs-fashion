@@ -36,13 +36,13 @@ export default function Footer() {
             <h3 className={styles.footerHead}>{t("store")}</h3>
             <div className={styles.column}>
               <Link href={`/product-category/women`}>
-                <a>{t("women")}</a>
+                {t("women")}
               </Link>
               <Link href={`/product-category/men`}>
-                <a>{t("men")}</a>
+                {t("men")}
               </Link>
               <Link href={`/product-category/bags`}>
-                <a>{t("bags")}</a>
+                {t("bags")}
               </Link>
             </div>
           </div>
