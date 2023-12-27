@@ -103,6 +103,7 @@
     "payment_method": "Payment Method",
     "delivery_method": "Delivery Method",
     "total": "Total Amount",
+    "total_message": "Total Amount {count, plural, =0 {no products yet} =1 {one product} other {# products}}.",
     "your_order_received": "Your order has been received. ",
     "bank_transfer_note": "Please send the bank slip screenshot by sending to our email (satnaingdev@gmail.com) or our Facebook page messenger after you've transferred the amount to our bank account.",
     "cash_delivery_note": "Your purchased items will be delivered within a week.",
