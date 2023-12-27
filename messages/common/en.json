@@ -110,7 +110,8 @@
     "store_pickup_note": "You can pickup your purchased item(s) in our store within 7 days.",
     "thank_you_for_purchasing": " Thank you for purchasing with us.",
     "our_banking_details": "Our Banking Details",
-    "send_order_email": "Send order detail to my email"
+    "send_order_email": "Send order detail to my email",
+    "birthday_ordinal_message": "It's your {year, selectordinal, one {#st} two {#nd} few {#rd} other {#th}} birthday!"
   },
   "Others": {
     "page_not_found": "Oops! Page Not Found!",
