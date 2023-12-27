@@ -96,22 +96,22 @@ const Header: React.FC<Props> = ({ title }) => {
             <ul className={`flex-0 lg:flex-1 flex ${styles.leftMenu}`}>
               <li>
                 <Link href={`/product-category/men`}>
-                  <a>{t("men")}</a>
+                  {t("men")}
                 </Link>
               </li>
               <li>
                 <Link href={`/product-category/women`}>
-                  <a>{t("women")}</a>
+                  {t("women")}
                 </Link>
               </li>
               <li>
                 <Link href="/product-category/bags">
-                  <a>{t("bags")}</a>
+                  {t("bags")}
                 </Link>
               </li>
               <li>
                 <Link href="/coming-soon">
-                  <a>{t("blogs")}</a>
+                  {t("blogs")}
                 </Link>
               </li>
             </ul>
@@ -119,8 +119,7 @@ const Header: React.FC<Props> = ({ title }) => {
             {/* Haru Logo */}
             <div className="flex-1 flex justify-center items-center cursor-pointer">
               <div className="w-32 h-auto">
-                <Link href="/">
-                  <a>
+                <Link href="/">                  
                     <Image
                       className="justify-center"
                       src="/logo.svg"
@@ -129,7 +128,6 @@ const Header: React.FC<Props> = ({ title }) => {
                       height={50}
                       layout="responsive"
                     />
-                  </a>
                 </Link>
               </div>
             </div>

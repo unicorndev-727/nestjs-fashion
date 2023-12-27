@@ -22,15 +22,9 @@ const MyLink: React.FC<LinkProps> = ({
   ...rest
 }) => {
   return (
-    <Link href={href} locale={locale}>
-      <a
-        className={`py-2 px-4 text-center ${
-          active ? "bg-gray200 text-gray500" : "bg-white text-gray500"
-        }`}
-        {...rest}
-      >
-        {children}
-      </a>
+    <Link href={href} locale={locale} className={`py-2 px-4 text-center ${active ? "bg-gray200 text-gray500" : "bg-white text-gray500"
+      }`} {...rest}>
+      {children}
     </Link>
   );
 };
@@ -72,14 +66,14 @@ const TopNav = () => {
                 style={{ zIndex: 9999 }}
               >
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <MyLink active={active} href={asPath} locale="en">
                       {t("eng")}
                     </MyLink>
                   )}
                 </Menu.Item>
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <MyLink active={active} href={asPath} locale="my">
                       {t("myn")}
                     </MyLink>
@@ -98,28 +92,26 @@ const TopNav = () => {
                 style={{ zIndex: 9999 }}
               >
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <a
                       href="#"
-                      className={`${
-                        active
-                          ? "bg-gray100 text-gray500"
-                          : "bg-white text-gray500"
-                      } py-2 px-4 text-center focus:outline-none`}
+                      className={`${active
+                        ? "bg-gray100 text-gray500"
+                        : "bg-white text-gray500"
+                        } py-2 px-4 text-center focus:outline-none`}
                     >
                       {t("usd")}
                     </a>
                   )}
                 </Menu.Item>
                 <Menu.Item>
-                  {({ active }) => (
+                  {({ active }: {active: boolean}) => (
                     <a
                       href="#"
-                      className={`${
-                        active
-                          ? "bg-gray100 text-gray500"
-                          : "bg-white text-gray500"
-                      } py-2 px-4 text-center focus:outline-none`}
+                      className={`${active
+                        ? "bg-gray100 text-gray500"
+                        : "bg-white text-gray500"
+                        } py-2 px-4 text-center focus:outline-none`}
                     >
                       {t("mmk")}
                     </a>

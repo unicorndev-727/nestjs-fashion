@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getCookie, removeCookies, setCookies } from "cookies-next";
+import { getCookie, removeCookies, setCookie } from "cookies-next";
 import React, { useState, useEffect, useContext, createContext } from "react";
 
 type authType = {
@@ -68,7 +68,7 @@ function useProvideAuth() {
   }, []);
 
   useEffect(() => {
-    setCookies("user", user);
+    setCookie("user", user);
   }, [user]);
 
   const register = async (

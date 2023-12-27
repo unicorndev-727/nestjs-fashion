@@ -1,23 +1,26 @@
-const withPWA = require("next-pwa");
+/** @type {import('next').NextConfig} */
+const runtimeCaching = require("next-pwa/cache");
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true,
+  runtimeCaching,
+  buildExcludes: [/middleware-manifest.json$/],
+  disable: process.env.NODE_ENV === "development",
+});
 
-module.exports = withPWA({
-  // module.exports = {
-  i18n: {
-    locales: ["en", "my"],
-    defaultLocale: "en",
-  },
+const nextConfig = withPWA({
   reactStrictMode: true,
-  // swcMinify: true,
+  swcMinify: true,
   compiler: {
     removeConsole: true,
   },
   images: {
     domains: ["robohash.org", "res.cloudinary.com"],
   },
-  pwa: {
-    dest: "public",
-    skipWaiting: true,
-    disable: process.env.NODE_ENV === "development",
+  i18n: {
+    locales: ["en", "my"],
+    defaultLocale: "en",
   },
-  // };
 });
+module.exports = nextConfig;

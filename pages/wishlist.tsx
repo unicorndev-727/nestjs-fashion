@@ -32,11 +32,9 @@ const Wishlist = () => {
             {t("wishlist")}
           </h1>
           <div className="mt-6 mb-3">
-            <Link href="/">
-              <a className="inline-block">
+            <Link href="/" className="inline-block">
                 <LeftArrow size="sm" extraClass="inline-block" />{" "}
                 {t("continue_shopping")}
-              </a>
             </Link>
           </div>
         </div>
@@ -88,7 +86,6 @@ const Wishlist = () => {
                           <Link
                             href={`/products/${encodeURIComponent(item.id)}`}
                           >
-                            <a>
                               <Image
                                 src={item.img1 as string}
                                 alt={item.name}
@@ -96,7 +93,6 @@ const Wishlist = () => {
                                 height={128}
                                 className="h-32 xl:mr-4"
                               />
-                            </a>
                           </Link>
                           <span className="text-xs md:hidden">{item.name}</span>
                         </td>

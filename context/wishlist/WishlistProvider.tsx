@@ -1,5 +1,5 @@
 import { useContext, useEffect, useReducer } from "react";
-import { getCookie, setCookies } from "cookies-next";
+import { getCookie, setCookie } from "cookies-next";
 
 import wishlistReducer from "./wishlistReducer";
 import WishlistContext from "./WishlistContext";
@@ -40,7 +40,7 @@ const useProvideWishlist = () => {
   }, []);
 
   useEffect(() => {
-    setCookies("wishlist", state.wishlist);
+    setCookie("wishlist", state.wishlist);
   }, [state.wishlist]);
 
   const addToWishlist = (item: itemType) => {
