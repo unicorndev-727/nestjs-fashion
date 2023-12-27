@@ -215,7 +215,7 @@ export default function Menu() {
                         style={{ zIndex: 9999 }}
                       >
                         <HMenu.Item>
-                          {({ active }) => (
+                          {({ active }: {active: boolean}) => (
                             <a
                               href="#"
                               className={`${active
@@ -228,7 +228,7 @@ export default function Menu() {
                           )}
                         </HMenu.Item>
                         <HMenu.Item>
-                          {({ active }) => (
+                          {({ active }: {active: boolean}) => (
                             <a
                               href="#"
                               className={`${active

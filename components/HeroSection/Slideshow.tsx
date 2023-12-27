@@ -1,3 +1,4 @@
+'use client'
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -8,10 +9,8 @@ import styles from "./Hero.module.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // import Swiper core and required modules
-import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
-
-// install Swiper modules
-SwiperCore.use([Pagination, Navigation, Autoplay]);
+// import SwiperCore, { Autoplay, Navigation, Pagination } from "swiper/core";
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 const sliders = [
   {
@@ -53,6 +52,8 @@ const Slideshow = () => {
     <>
       <div className="relative -top-20 slide-container w-full z-20">
         <Swiper
+          modules={[Navigation, Pagination, Autoplay]}
+          navigation  
           slidesPerView={1}
           spaceBetween={0}
           loop={true}
@@ -60,7 +61,6 @@ const Slideshow = () => {
             delay: 5000,
             disableOnInteraction: false,
           }}
-          navigation={true}
           pagination={{
             clickable: true,
             type: "fraction",
