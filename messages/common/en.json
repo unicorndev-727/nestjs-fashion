@@ -84,6 +84,7 @@
     "place_order": "Place Order",
     "cash_on_delivery": "Cash on Delivery",
     "bank_transfer": "Bank Transfer",
+    "stripe": "Via Stripe",
     "bank_transfer_desc": "Make your payment directly into our CB, AYA, Kpay.",
     "name": "Name",
     "password": "Password",
